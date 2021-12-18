@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,5 +23,40 @@
             </objects>
             <point key="canvasLocation" x="132" y="97"/>
         </scene>
+        <!--Add Event View Controller-->
+        <scene sceneID="O8R-1u-0rz">
+            <objects>
+                <viewController storyboardIdentifier="AddEventViewController" id="Yv7-Ou-jtI" customClass="AddEventViewController" customModule="EventsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49V-vp-9Iw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-vC-lD0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6vN-rC-kJW"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lXk-vC-lD0" firstAttribute="leading" secondItem="6vN-rC-kJW" secondAttribute="leading" id="Il3-5g-Lue"/>
+                            <constraint firstItem="lXk-vC-lD0" firstAttribute="top" secondItem="6vN-rC-kJW" secondAttribute="top" id="NIV-an-kSp"/>
+                            <constraint firstItem="6vN-rC-kJW" firstAttribute="bottom" secondItem="lXk-vC-lD0" secondAttribute="bottom" id="ohL-Q2-kYx"/>
+                            <constraint firstItem="6vN-rC-kJW" firstAttribute="trailing" secondItem="lXk-vC-lD0" secondAttribute="trailing" id="oml-zq-FSw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="lXk-vC-lD0" id="tX7-Hb-f2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6P-rd-fTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="96"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
